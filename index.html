@@ -1,0 +1,64 @@
+<html lang="en">
+  <head>
+    <title>My first three.js app</title>
+    <link rel="stylesheet" href="styles.css">  <!--this tells the code to get styling from the css file and that aht its geting is a style sheet-->
+    <meta charset="utf-8">
+    <style>
+      body { margin: 0; }
+    </style>        
+  </head>
+  <body>    
+    <div id="info"> 
+      <label id = "inputlabel1">Number of Iterations:</label>
+      <input type = "number" id = "input1" />
+      <button id = "input1data">Apply</button>
+
+      <div id ="eqinput">
+        <label id = "inputlabel1Y">dy/dt=</label>
+        <input id = "input2foreqY"/>
+        <button id = "inputforeqY">Apply</button>
+
+        <label id = "inputlabel1X">dx/dt=</label>
+        <input id = "input2foreqX"/>
+        <button id = "inputforeqX">Apply</button>
+
+        <label id = "inputlabel1Z">dz/dt=</label>
+        <input id = "input2foreqZ"/>
+        <button id = "inputforeqZ">Apply</button>
+      </div>
+
+      <div id ="startbutton">
+        <button id = "input2start">Start Animation</button>
+      </div>
+    </div>
+
+
+
+
+
+    <div id="runningInfo">
+      <div id="runningInfoeq">
+        <p id = "eqlabely">
+          dy/dt:
+          <span id = "eqdisplayY"></span>
+        </p>
+
+        <p id = "eqlabelx">
+          dx/dt:
+          <span id = "eqdisplayX"></span>
+        </p>
+
+        <p id = "eqlabelz">
+          dz/dt:
+          <span id = "eqdisplayZ"></span>
+        </p>
+      </div>
+      <p id = "iterationlabel">
+        Current Number of Iterations:
+        <span id = "iterationdisplay">1000</span>
+      </p>      
+    </div>
+    
+    <script type="module" src="/main2.js"></script>
+  </body>
+</html>

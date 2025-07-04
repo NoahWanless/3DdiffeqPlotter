@@ -1,0 +1,38 @@
+#info {
+    /* position: fixed; */    
+    max-height: 115px; 
+    width: 50%;    
+    z-index: 100;    
+    background-color: limegreen;
+    border: 2px solid lime;
+    padding: 10px;    
+}
+#startbutton{
+
+}
+#runningInfo{
+    /* display: none; */
+    position: fixed;    
+    top: 0px;
+    right: 0px;
+    max-height: 115px; 
+    width: 50%;    
+    z-index: 100;    
+    background-color: limegreen;
+    border: 2px solid lime;
+    padding: 10px;   
+    
+}
+
+#runningInfoeq {
+    position: relative; 
+    top: 0px;
+    right: 0px;
+}
+
+#inputlabel1{
+
+}
+
+#input1{
+}
