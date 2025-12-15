@@ -12,10 +12,11 @@
 }
 #runningInfo{
     /* display: none; */
+    display: inline-block;
     position: fixed;    
     top: 0px;
     right: 0px;
-    max-height: 115px; 
+    max-height: 130px; 
     width: 50%;    
     z-index: 100;    
     background-color: limegreen;

@@ -100,7 +100,7 @@ function evaluatePoints(){
     let changingY = 5; //intial conditions
     let changingX = 5; //intial conditions
     let changingZ = 5; //intial conditions
-    let timeStep = 0.01
+    let timeStep = 0.01 //!MAKE THIS BIGGER FOR DEMONSTRATION??????
     //this is using basic eulers method
 	for ( let i = 0, l = MAX_POINTS; i < l; i ++ ) { //here i would put eulers step 
         runningTime +=timeStep; //first update timestep
@@ -118,7 +118,7 @@ function evaluatePoints(){
 
 
 
-
+//!delete? 
 function updatePositions() {
 	const positions = line.geometry.attributes.position.array;
     //initialize everything to zero
@@ -206,6 +206,8 @@ init();
 
 
 
+//some cool strange attractors!
+// https://www.dynamicmath.xyz/strange-attractors/
 
 
 
