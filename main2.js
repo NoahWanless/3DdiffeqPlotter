@@ -126,36 +126,12 @@ function evaluatePoints(){
 
 
 
-//!delete? 
-function updatePositions() {
-	const positions = line.geometry.attributes.position.array;
-    //initialize everything to zero
-	let x, y, z, index;
-	x = y = z = index = 0;
-    //for all the points randomly update them
-    let runningTime = 0;
-    let changingY = 5; //intial conditions
-    let timeStep = 0.01
-	for ( let i = 0, l = MAX_POINTS; i < l; i ++ ) { //here i would put eulers step 
-        runningTime +=timeStep; //first update timestep
-        changingY += expressionY.evaluate({x:0,y:changingY,z:0,t:runningTime}) * timeStep;
-        //z = z+timeStep;
-        //changingY += eq(0,changingY,0,runningTime) * timeStep; //update out y,
-
-        positions[ index ++ ] = runningTime;
-        positions[ index ++ ] = changingY;
-        positions[ index ++ ] = z;
-	}
-    
-    
-}
-
 
 let iterationCounter = 10000
 // animate
 function animate() {
     requestAnimationFrame( animate );
-    if(drawCount < MAX_POINTS){
+    if(drawCount < iterationCounter){ //MAX_POINTS
         drawCount = ( drawCount + 1 );  
     }
 	line.geometry.setDrawRange( 0, drawCount ); //this will increase the draw count as we go 
@@ -201,7 +177,7 @@ document.getElementById("inputforeqZ").onclick = function(){
 document.getElementById("input2start").onclick = function(){
     iterationCounter = 1000 //resets intial values so that if a new equation is used itll reset
     drawCount = 2
-    terminal.log(expressionY.toString());
+    terminal.log("animation time!");
     evaluatePoints();
     animate();
 }

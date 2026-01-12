@@ -1,15 +1,17 @@
 ######################## Notes on this project: ########################
-Remember that the code comes with the lorenz equations baked in, so you can just hit run and things will work with one of the strange attractors. 
 
-If you want more examples go to the following link
+This is a project that uses three.js to render in 3D a solution to a 3D differental 
+equation given intial conditions using Eulers method.
+
+The lorenz equations baked in, so you can just hit run and it will be displayed
+
+If you want more examples of strange attractors go to the following link
 https://www.dynamicmath.xyz/strange-attractors/
 
-This project works by using Eulers numerical method to approximate the solution to the given differental equation with given intial conditions.
-Using Webgl to display it.
-
+Has a bit of blot that i will clear out eventual when i get around to it 
 
 ######################## Instructions to run this project: ########################
-Be in this directory and run the command:
+Be in its directory and run the command:
 
 npx vite
 
