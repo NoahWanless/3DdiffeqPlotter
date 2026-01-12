@@ -20,12 +20,16 @@ let expressionZ;
 
 function init(){
     terminal.log('Hey terminal! A message from the browser via the init function')
-
+    const canvasReference = document.getElementById("myCanvas");
     //reneder
-    renderer = new THREE.WebGLRenderer();
+    renderer = new THREE.WebGLRenderer({
+        canvas: canvasReference,
+        antialias: true // Optional: for smoother edges
+    });
+    renderer.setSize(canvasReference.clientWidth, canvasReference.clientHeight); //for the div size
+    //renderer.setSize( window.innerWidth, (window.innerHeight - 100) ); //for the ful window
     renderer.setPixelRatio( window.devicePixelRatio );
-    renderer.setSize( window.innerWidth, (window.innerHeight - 100) );
-    document.body.appendChild( renderer.domElement );
+    //document.body.appendChild( renderer.domElement ); //this directly adds the render to the html AT THE END
 
     //makes scene
     scene = new THREE.Scene();
@@ -85,10 +89,14 @@ function init(){
     expressionY = parser.parse("x*(28-z)-y"); //preset eqauations
     expressionX = parser.parse("10*(y-x)");
     expressionZ = parser.parse("x*y-(8/3)*z");
+    document.getElementById("eqdisplayY").textContent = "x*(28-z)-y";
+    document.getElementById("eqdisplayX").textContent = "10*(y-x)";
+    document.getElementById("eqdisplayZ").textContent = "x*y-(8/3)*z";
 
     //begins doing stuff
-	updatePositions();
+	//updatePositions();
     renderer.render(scene, camera);
+    animate();
 }
 
 //evalutes the points of the line based on the eqs given
